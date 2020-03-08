@@ -4,7 +4,7 @@ import hashlib
 from functools import partial
 
 def calchash(file):
-    ha = hashlib.sha1()
+    ha = hashlib.sha512()
     with open(file,'rb') as f:
         for buf in iter(partial(f.read, 1024*1024), b''):
             ha.update(buf)
