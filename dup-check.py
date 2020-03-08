@@ -23,6 +23,7 @@ for curdir , dirs, files  in os.walk(dir1):
         fpath =os.path.join(curdir,file)
         fhash = calchash(fpath)
         if fhash in htable:
-            print( fpath)
+            print("duplicated!:"+htable[fhash] +":" +fpath)
+            print('"'+fpath+'"')
             continue
         htable[fhash] =  fpath
