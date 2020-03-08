@@ -22,7 +22,6 @@ for curdir , dirs, files  in os.walk(dir1):
     for file in files:
         fpath =os.path.join(curdir,file)
         fhash = calchash(fpath)
-        print("x:"+ fpath)
         if fhash in htable:
             print( fpath)
             continue
